@@ -5,6 +5,14 @@ body {
   background: #ffffff;
 }
 
+.Top {
+  height: 100px;
+  width: 80%;
+  background-color: green;
+  margin: 30px;
+  align-items: center;
+  justify-content: center;
+}
 .Calendar {
   height: 100%;
   width: 100%;
@@ -32,7 +40,16 @@ body {
   border: none;
   font-size: 30px;
 }
-
+.add {
+  margin: 10px;
+  margin-bottom: 100px;
+  text-align: left;
+}
+.addModal {
+  width: 250px;
+  height: 80px;
+  display: inline-block;
+}
 .choice {
   align-items: center;
   border: none;
