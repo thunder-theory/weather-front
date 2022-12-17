@@ -85,6 +85,8 @@ body {
   justify-content: center;
   border-radius: 2em;
   background-color: #224957;
+  color: #e1ddeb;
+  font-size: 10px;
 }
 
 .header {
@@ -102,6 +104,7 @@ body {
   margin: 50px;
   background: #224957;
   border: none;
+
   font-size: 30px;
 }
 
