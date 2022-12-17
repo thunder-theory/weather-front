@@ -87,6 +87,8 @@ body {
   background-color: #224957;
   color: #e1ddeb;
   font-size: 10px;
+  font-weight: bold;
+  color: #d8dbe0;
 }
 
 .header {
@@ -104,7 +106,8 @@ body {
   margin: 50px;
   background: #224957;
   border: none;
-
+  font-weight: bold;
+  color: #d8dbe0;
   font-size: 30px;
 }
 
