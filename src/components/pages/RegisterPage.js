@@ -1,13 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import axios from "axios";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 import "../../App.css";
+
+const signUpDB = (username, password, place) => {
+  return function (dispatch, getState, { history }) {
+    axios({
+      method: "post",
+      url: "http://ac54507fe2ea9428abcb050e29baf295-2046403196.ap-northeast-2.elb.amazonaws.com/swagger-ui/index.html#/user-controller/signupUsingPOST",
+      data: {
+        username: username,
+        password: password,
+        place: place,
+      },
+    })
+      .then((res) => {
+        window.alert(res.data.result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+};
 
 export default function SignUpPage() {
   return (
     <div className="text-center m-5-auto">
       <h2>회 원 가 입</h2>
-      <form action="/calender">
+      <form action="/calendar">
         <p>
           <label>아이디</label>
           <br />
@@ -30,9 +51,13 @@ export default function SignUpPage() {
         </p>
 
         <p>
-          <button id="sub_btn" type="submit">
+          <button id="sub_btn" type="submit" onClick={() => signUpDB()}>
             가 입 하 기
           </button>
+          <br />
+          <p>
+            <Link to="/login">로그인 하기</Link>
+          </p>
         </p>
       </form>
       <footer>
