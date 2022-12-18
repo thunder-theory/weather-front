@@ -3,6 +3,9 @@ import Modal from "./Modal";
 import calendarReducer from "./reducer/CalendarReducer";
 import MakeCalendar from "../module/MakeCalendar";
 import { Link } from "react-router-dom";
+import differenceInSeconds from "date-fns/esm/differenceInSeconds";
+//import { transString } from "./CalcDate";
+//import Schedule from "./Schedule";
 
 const today = new Date();
 
@@ -66,47 +69,67 @@ const Calendar = () => {
     dispatch({ type: "MODAL" });
   };
 
+  // 일정 삭제
+  const OnDelfirm = () => {
+    dispatch({ type: "MODAL" });
+  };
+
   return (
     <>
-      <div className="Calendar">
-        <div className="header">
-          <button className="move" onClick={onDecreases}>
-            &lt;
-          </button>
-          <p>{yearMonth}</p>
-          <button className="move" onClick={onIncreases}>
-            &gt;
-          </button>
+      <div className="Top">
+        <div className="Topheader">
+          <div className="logoheader">
+            <button className="logo"></button>
+          </div>
+
+          <div className="logininfo">
+            <button className="schedule">일정</button>
+            <button className="logininfobtn">회원정보 수정</button>
+          </div>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <td>Sun</td>
-              <td>Mon</td>
-              <td>Tue</td>
-              <td>Wed</td>
-              <td>Thu</td>
-              <td>Fri</td>
-              <td>Sat</td>
-            </tr>
-          </thead>
-          <tbody>
-            {MakeCalendar({
-              year,
-              month,
-              firstDay,
-              lastDate,
-              changeVisible,
-              todo,
-            })}
-          </tbody>
-        </table>
-        <Modal
-          index={index}
-          visible={visible}
-          onConfirm={onConfirm}
-          onCancel={onCancel}
-        />
+      </div>
+      <div className="Calendarlound">
+        <div className="Calendar">
+          <div className="header">
+            <button className="move" onClick={onDecreases}>
+              &lt;
+            </button>
+            <p>{yearMonth}</p>
+            <button className="move" onClick={onIncreases}>
+              &gt;
+            </button>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <td>Sun</td>
+                <td>Mon</td>
+                <td>Tue</td>
+                <td>Wed</td>
+                <td>Thu</td>
+                <td>Fri</td>
+                <td>Sat</td>
+              </tr>
+            </thead>
+            <tbody>
+              {MakeCalendar({
+                year,
+                month,
+                firstDay,
+                lastDate,
+                changeVisible,
+                todo,
+              })}
+            </tbody>
+          </table>
+          <Modal
+            index={index}
+            visible={visible}
+            onConfirm={onConfirm}
+            onCancel={onCancel}
+          />
+        </div>
       </div>
     </>
   );

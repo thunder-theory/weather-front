@@ -32,15 +32,25 @@ body {
   text-transform: capitalize;
 }
 
+.pagepage {
+  height: 100%;
+  width: 100%;
+  background-color: #093545;
+}
+
 /***    Landing Page     ***/
 .main-title,
 .main-para {
   color: #f1f1f1;
+  background-color: #093545;
 }
 
 .main-title {
   padding-top: 10rem;
   font-size: 5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(/src/img/logo.png);
 }
 
 .main-para {

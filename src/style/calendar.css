@@ -1,60 +1,167 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    background: #d8dbe0;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
 }
 
+/* 헤더 로그 주석 */
+.Top {
+  height: 250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  background-color: #093545;
+}
+
+.Topheader {
+  height: 150px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: middle;
+  border-radius: 2em;
+  background-color: #224957;
+}
+
+.logo {
+  background-image: url(/src/img/Thunder.png);
+  height: 100px;
+  width: 300px;
+  border: none;
+  border-radius: 2em;
+  background-repeat: no-repeat;
+  justify-content: left;
+  background-position: center center;
+  background-color: #224957;
+}
+/*#9590A0   */
+.schedule {
+  height: 70px;
+  width: 150px;
+  border: none;
+  border-radius: 2em;
+  background-color: #224957;
+  justify-content: left;
+  font-size: 25px;
+  font-weight: bold;
+  color: #9590a0;
+}
+
+.logininfobtn {
+  height: 70px;
+  width: 200px;
+  border: none;
+  margin-right: 50px;
+  border-radius: 2em;
+  background-color: #224957;
+  font-size: 25px;
+  justify-content: left;
+  font-weight: bold;
+  color: #9590a0;
+}
+
+/* 캘린더 css */
+.Calendarlound {
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #093545;
+}
 .Calendar {
-    height: 100%;
-    width: 100%;
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  width: 80%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2em;
+  background-color: #224957;
+  color: #e1ddeb;
+  font-size: 10px;
+  font-weight: bold;
+  color: #d8dbe0;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .header p {
-    margin-top: 45px;
-    font-size:30px;
+  margin-top: 45px;
+  font-size: 30px;
 }
 
 .move {
-    margin: 50px;
-    background: #d8dbe0;
-    border: none;
-    font-size: 30px;
-
+  margin: 50px;
+  background: #224957;
+  border: none;
+  font-weight: bold;
+  color: #d8dbe0;
+  font-size: 30px;
 }
 
-.choice{
-    align-items: center;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.25rem 1rem;
-    color: #768192;
-    outline: none;
-    cursor: pointer;
-    background: #d8dbe0;
-    margin: 30px;
+/*날짜 입력 */
+.add {
+  margin: 10px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.addModal {
+  width: 160px;
+  height: 80px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 2em;
+  border: 3px solid #77af9c;
+  background-color: #77af9c;
+  color: #d7fff1;
+}
+
+.addtime {
+  width: 200px;
+  height: 70px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 2em;
+  font-size: large;
+}
+
+/*요일 선택 */
+.choice {
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.25rem 1rem;
+  color: #768192;
+  outline: none;
+  cursor: pointer;
+  background: #d8dbe0;
+  margin: 30px;
 }
 .choice:hover {
-    backgorund: black;
+  backgorund: black;
 }
 
 input {
-    padding: 3px;
-    border-radius: 5px;
-    border: 1px solid black;
-    height: 25px;
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 25px;
 }
-
-
