@@ -4,6 +4,7 @@ import Style from "../module/Style";
 const Picker = ({ changeColor }) => {
   const colors = ["#efadce", "#6ea8fe"];
   const colors2 = ["#ffe69c", "#a6e9d5", "#c29ffa"];
+
   return (
     <div className="picker">
       <p>장소(실내: 붉은색 / 실외: 파란색)</p>
@@ -17,7 +18,7 @@ const Picker = ({ changeColor }) => {
           />
         ))}
       </div>
-      <p>도구(노란색 : / 녹색 : / 보라색 : )</p>
+      <p>(노란색: 업무 / 녹색: 운동 / 보라색: 기타 )</p>
       <div className="tool">
         {colors2.map((color, index) => (
           <div
