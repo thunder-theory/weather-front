@@ -90,6 +90,7 @@ const MakeCalendar = ({
 
   const makeDay = (week) => {
     const result = [];
+
     getJSON(
       "([https://api.openweathermap.org/data/2.5/weather?lat=36.64&lon=127.48&appid=8e5483a098321f91a5ba4dad91ee9d5e&units=metric))",
       function (err, data) {
@@ -100,6 +101,7 @@ const MakeCalendar = ({
         }
       }
     );
+
     // 첫 주
     if (week == 1) {
       const prevLastDate = parseInt(new Date(year, month, 0).getDate());
